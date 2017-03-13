@@ -65,7 +65,7 @@ void MainWindow::on_agregar_clicked(){
         }else{
             Posx += 80;
         }
-        cant_folder+=1;
+        //cant_folder+=1;
 
         //refrescar();
     }else if(respuesta==2){
@@ -86,7 +86,7 @@ void MainWindow::on_agregar_clicked(){
         }else{
             Posx += 80;
         }
-        cant_texto+=1;
+        //cant_texto+=1;
 
     }
 
