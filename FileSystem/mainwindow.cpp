@@ -92,7 +92,9 @@ void MainWindow::on_agregar_clicked(){
 
 }
 
+
 void MainWindow::on_eliminar_clicked(){
+    /*
     int respuesta;
     QString nombre;
 
@@ -111,4 +113,6 @@ void MainWindow::on_eliminar_clicked(){
     if(respuesta==2){
 
     }
+    */
 }
+

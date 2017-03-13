@@ -32,7 +32,7 @@ private:
     QPushButton *Eliminar;
     QPushButton *Folder;
     QPushButton *Texto;
-    void listarElementos();
+    //void listarElementos();
     string refrescar();
     int cant_folder=0;
     int cant_texto=0;
