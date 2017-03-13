@@ -5,6 +5,8 @@
 #include <QStatusBar>
 #include <filesystem.h>
 #include <QMessageBox>
+#include <Folder.h>
+#include <archivo.h>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -22,19 +24,22 @@ void MainWindow::on_salir_clicked(){
     close();
 }
 
-Base MainWindow::listarElementos(Folder *raiz){
-    return fs->listarElementos(raiz);
+/*
+
+Folder MainWindow::listarElementos(){
+    return fs->listarElementos(fs->raiz);
 
 }
 
-void MainWindow::refrescar(){
-    if(listarElementos(raiz)==Folder){
-        QMessageBox::setInformativeText("ENCONTRAMOS FOLDERS");
+string MainWindow::refrescar(){
+    if(listarElementos()==Folder){
+       return QMessageBox::setInformativeText("ENCONTRAMOS FOLDERS");
     }
-    if(listarElementos(raiz)==Archivo){
-        QMessageBox::setInformativeText("ENCONTRAMOS ARCHIVOS");
+    if(listarElementos()==Archivo){
+        return QMessageBox::setInformativeText("ENCONTRAMOS ARCHIVOS");
     }
 }
+*/
 
 void MainWindow::on_agregar_clicked(){
 
@@ -62,7 +67,7 @@ void MainWindow::on_agregar_clicked(){
         }
         cant_folder+=1;
 
-        refrescar();
+        //refrescar();
     }else if(respuesta==2){
         nombre = QInputDialog::getText(this,"Agregar Archivo","Ingrese el nombre del Archivo");
         fs->agregarElemento(fs->raiz,nombre.toStdString(),2);

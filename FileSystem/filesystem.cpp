@@ -39,6 +39,7 @@ Base * filesystem::cargarElementos(string ruta, Folder * subRaiz){
         return NULL;
 }
 
+/*
 
 void filesystem::eliminarElemento(string ruta){
     eliminarElemento(ruta, raiz);
@@ -59,6 +60,7 @@ void filesystem::eliminarElemento(string ruta, Folder * subRaiz){
         }
     }
 }
+*/
 
 
     void filesystem::copiarElemento (Folder * origen, string nombre, Folder * destino){
@@ -89,13 +91,15 @@ void filesystem::eliminarElemento(string ruta, Folder * subRaiz){
         }
     }
 
-    Base filesystem::listarElementos(Folder *raiz){
+    /*
+    Base filesystem::listarElementos(Base *raiz){
         int elemento = 0;
         while(raiz->siguiente !=NULL){
-            return raiz->obtenerElemento(elemento);
             elemento++;
+            return raiz->obtenerElemento(elemento);
         }
     }
+    */
 
 
 
