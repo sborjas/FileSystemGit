@@ -41,6 +41,11 @@ string MainWindow::refrescar(){
 }
 */
 
+void refrescar(){
+
+}
+
+
 void MainWindow::on_agregar_clicked(){
 
     int respuesta;
@@ -50,6 +55,7 @@ void MainWindow::on_agregar_clicked(){
     if(respuesta==1){
         nombre = QInputDialog::getText(this,"Agregar Folder","Ingrese el nombre del Folder");
         fs->agregarElemento(fs->raiz,nombre.toStdString(),1);
+
         Agregar = new QPushButton("agregar",this);
         connect(Agregar, SIGNAL (clicked()), this, SLOT (on_agregar_clicked()));
         Folder = new QPushButton("",this);
@@ -71,6 +77,7 @@ void MainWindow::on_agregar_clicked(){
     }else if(respuesta==2){
         nombre = QInputDialog::getText(this,"Agregar Archivo","Ingrese el nombre del Archivo");
         fs->agregarElemento(fs->raiz,nombre.toStdString(),2);
+
         Agregar = new QPushButton("agregar",this);
         connect(Agregar, SIGNAL (clicked()), this, SLOT (on_agregar_clicked()));
         Texto = new QPushButton("",this);
@@ -93,7 +100,7 @@ void MainWindow::on_agregar_clicked(){
 }
 
 
-void MainWindow::on_eliminar_clicked(){
+//void MainWindow::on_eliminar_clicked(){
     /*
     int respuesta;
     QString nombre;
@@ -114,5 +121,10 @@ void MainWindow::on_eliminar_clicked(){
 
     }
     */
-}
+//}
 
+
+void MainWindow::on_eliminar_clicked()
+{
+
+}

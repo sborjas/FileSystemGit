@@ -29,19 +29,17 @@ public:
             fin = el;
             tamano_lista++;
         }
+
         Base *temp = inicio;
-        while(temp->siguiente !=NULL){
+        if(temp->siguiente !=NULL){
             temp = temp->siguiente;
-            cout<<temp->getNombre()<<endl;
+        }else{
+            temp->siguiente = el;
+            el->anterior = temp;
+            fin = el;
+            tamano_lista++;
         }
-
-        temp->siguiente = el;
-        el->anterior = temp;
-        fin = el;
-        tamano_lista++;
-
-
-    }
+}
 
     int buscar(Base *el){
         Base *temp = inicio;

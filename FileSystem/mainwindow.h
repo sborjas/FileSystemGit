@@ -21,8 +21,6 @@ public:
 private slots:
     void on_salir_clicked();
     void on_agregar_clicked();
-
-
     void on_eliminar_clicked();
 
 private:
@@ -32,10 +30,13 @@ private:
     QPushButton *Eliminar;
     QPushButton *Folder;
     QPushButton *Texto;
+    void refrescar();
+
+
     //void listarElementos();
-    string refrescar();
-    int cant_folder=0;
-    int cant_texto=0;
+    //string refrescar();
+    //int cant_folder=0;
+    //int cant_texto=0;
     int Posx =20;
     int Posy = 50;
 };
